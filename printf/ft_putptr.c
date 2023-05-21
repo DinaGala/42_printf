@@ -1,28 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nzhuzhle <nzhuzhle@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/18 20:56:27 by nzhuzhle          #+#    #+#             */
-/*   Updated: 2023/05/21 19:11:50 by nzhuzhle         ###   ########.fr       */
+/*   Created: 2023/05/21 20:40:14 by nzhuzhle          #+#    #+#             */
+/*   Updated: 2023/05/21 20:41:08 by nzhuzhle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putchar(int c)
+int	ft_putptr_hex(void *)
 {
-	return(write(1, &c, 1));
-}
-
-int	ft_putstr(char *s)
-{
-	int	len;
-
-	len = 0;
-	while (s[len])
-		len++;
-	return(write(1, s, len));
 }

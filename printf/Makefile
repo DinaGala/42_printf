@@ -6,7 +6,7 @@
 #    By: nzhuzhle <nzhuzhle@student.42barcel>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/26 18:10:18 by nzhuzhle          #+#    #+#              #
-#    Updated: 2023/05/18 18:49:48 by nzhuzhle         ###   ########.fr        #
+#    Updated: 2023/05/21 21:17:21 by nzhuzhle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,12 +17,11 @@ CFLAGS = -Wall -Wextra -Werror
 
 SRC_LIBFT = libft/libft.a
 MAKE_LIBFT = make -C libft
-SRCS = 
+SRCS = ft_printf.c ft_putnbr.c ft_putchar.c 
 
 INCLUDE = -I ./
 
 OBJ = $(SRCS:.c=.o) 
-OBJ_BONUS = $(SRCS_BONUS:.c=.o)	
 
 all: libs $(NAME)
 
@@ -32,7 +31,7 @@ libs:
 %.o: %.c $(HEADER)
 	$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
-$(NAME): $(OBJ) $(SRC_LIBFT)
+$(NAME): $(OBJ) ./$(SRC_LIBFT)
 	cp $(SRC_LIBFT) $(NAME)
 	ar -rcs $(NAME) $(OBJ)
 
@@ -41,8 +40,9 @@ clean:
 	$(MAKE_LIBFT) clean	
 
 fclean: clean
-	rm -f $(NAME) $(SRC_LIBFT)
+	rm -f $(NAME) 
+	$(MAKE_LIBFT) fclean
 
 re: fclean all
 
-.PHONY: all fclean clean re bonus
+.PHONY: all fclean clean re
