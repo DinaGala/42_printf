@@ -6,7 +6,7 @@
 /*   By: nzhuzhle <nzhuzhle@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 18:50:40 by nzhuzhle          #+#    #+#             */
-/*   Updated: 2023/05/22 20:08:42 by nzhuzhle         ###   ########.fr       */
+/*   Updated: 2023/05/23 18:30:17 by nzhuzhle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	ft_printf(const char *str, ...)
 	numchr = 0;
 	check = 0;
 	va_start(alst, str);
-	while (*str && check > -1)
+	while (*str && check != -1)
 	{
 		if (*str != '%')
 		{
@@ -65,15 +65,16 @@ int	ft_printf(const char *str, ...)
 
 int	main(void)
 {
-	int	c = 99;
-	char	*str;
-	int	i = 21474;
+//	int	c = 99;
+//	char	*str;
+	int	i = -21474;
 		
-	str = "";
+//	str = "";
 
 //	printf(" NULL %s NULL ", NULL);
 //	printf("\n%d\n", printf(" NULL %s NULL ", NULL));
-	ft_printf(" NULL %s NULL ", NULL);
+	printf("\n%d", ft_printf("%i", i));
+//	printf("\n%d", printf("%i", ""));
 	//printf("decimal: %d  unsigned decimal: %u  percent: %% \n", i, i);
 	//ft_printf("decimal: %d  unsigned decimal: %u  percent: %% \n", i, i);
 	//printf("xhex: %x  XHEX: %X  pointer: %p \n", i, i, str);

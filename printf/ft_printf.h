@@ -6,17 +6,17 @@
 /*   By: nzhuzhle <nzhuzhle@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/18 19:04:32 by nzhuzhle          #+#    #+#             */
-/*   Updated: 2023/05/22 20:17:12 by nzhuzhle         ###   ########.fr       */
+/*   Updated: 2023/05/23 19:34:28 by nzhuzhle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
-
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
-# include "../libft/libft.h"
+# include "libft/libft.h"
+# include <stdio.h>
 
 /* archivo ft_printf.c *****************************************/
 int	ft_printf(const char *str, ...);
